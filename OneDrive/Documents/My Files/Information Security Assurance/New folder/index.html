@@ -29,7 +29,7 @@
                                 Encrypt Text
                             </button>
                             <button type="button" class="btn btn-primary mt-5 m-2 " data-bs-toggle="modal" data-bs-target="#Decryption" style="pointer-events: fill;">
-                                Dencrypt Text
+                                Decrypt Text
                             </button>
                         </div>
                     </div>
@@ -39,6 +39,7 @@
                 <div class="modal fade" id="Encryption" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                     <div class="modal-content">
+                        <form id="form1">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">EncrypTool</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -66,6 +67,7 @@
                             </div>
                             <div class="mb-3">
                                 <button id="encrypt" type="button" class="btn btn-primary">Encrypt</button>
+                                <button type="button" class="btn btn-warning" onclick="res1();">Reset</button>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Encrypted Text</label>
@@ -85,6 +87,7 @@
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Done</button>
                         </div>
+                    </form>
                     </div>
                     </div>
                 </div>
@@ -94,6 +97,7 @@
                 <div class="modal fade" id="Decryption" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                     <div class="modal-content">
+                        <form action="" id="form2">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">DecrypTool</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -120,6 +124,7 @@
                             </div>
                             <div class="mb-3">
                                 <button type="button" class="btn btn-primary" id="decrypt">Decrypt</button>
+                                <button type="button" class="btn btn-warning" onclick="res2();">Reset</button>
                             </div>
                             <div class="mb-3">
                                 <label for="textOutput" class="form-label">Decrypted Text</label>
@@ -139,6 +144,7 @@
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Done</button>
                         </div>
+                    </form>
                     </div>
                     </div>
                 </div> 
@@ -366,7 +372,13 @@
                         });
                 };
 
-                
+                function res1(){
+                   document.getElementById('form1').reset();
+                };
+
+                function res2(){
+                   document.getElementById('form2').reset();
+                }
        
 
         //Modal Function
