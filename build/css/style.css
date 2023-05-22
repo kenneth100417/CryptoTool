@@ -4,3 +4,7 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+body{
+    background-image: url('/img/bg.jpg');
+}
